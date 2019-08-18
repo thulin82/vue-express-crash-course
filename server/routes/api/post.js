@@ -1,7 +1,9 @@
 const express = require('express');
 const mongodb = require('mongodb');
+const dotenv = require('dotenv');
 
 const router = express.Router();
+dotenv.config();
 
 // Get Posts
 router.get('/', async (req, res) => {
@@ -26,11 +28,10 @@ router.delete('/:id', async (req, res) => {
         _id: new mongodb.ObjectID(req.params.id)
     });
     res.status(200).send();
-})
+});
 
 async function loadPostsCollection() {
-    const client = await mongodb.MongoClient.connect
-    ('MONGOURI', {
+    const client = await mongodb.MongoClient.connect(process.env.DB_URL, {
         useNewUrlParser: true
     });
 
