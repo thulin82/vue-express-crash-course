@@ -21,8 +21,8 @@
         "mongodb": "^3.5.0"
     },
     "devDependencies": {
-        "@vue/cli": "^4.4.0",
-        "eslint": "^7.5.0",
+        "@vue/cli": "^4.5.0",
+        "eslint": "^7.6.0",
         "nodemon": "^2.0.0"
     }
 }
