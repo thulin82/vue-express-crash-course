@@ -1,9 +1,10 @@
 const express = require('express');
 const mongodb = require('mongodb');
 const dotenv = require('dotenv');
+const path = require('path');
 
 const router = express.Router();
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../../../config/config.env') });
 
 // Get Posts
 router.get('/', async (req, res) => {
@@ -25,7 +26,7 @@ router.post('/', async (req, res) => {
 router.delete('/:id', async (req, res) => {
     const posts = await loadPostsCollection();
     await posts.deleteOne({
-        _id: new mongodb.ObjectID(req.params.id)
+        _id: new mongodb.ObjectId(req.params.id)
     });
     res.status(200).send();
 });

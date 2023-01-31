@@ -14,5 +14,10 @@ $ npm install
 ```
 $ npm start
 ```
+### Environment variables
+In config/config.env add
+```
+DB_URL =
+```
 
 © Markus Thulin 2019-

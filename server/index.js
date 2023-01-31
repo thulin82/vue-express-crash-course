@@ -2,9 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 
-dotenv.config();
-
+dotenv.config({ path: path.resolve(__dirname, '../config/config.env') });
 const app = express();
 
 //Middleware
@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-const posts = require('./routes/api/post');
+const posts = require('./routes/api/posts');
 
 app.use('/api/posts', posts);
 
