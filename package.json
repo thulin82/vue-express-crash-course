@@ -18,11 +18,11 @@
         "cors": "^2.8.0",
         "dotenv": "^16.4.0",
         "express": "^4.21.0",
-        "mongodb": "^6.9.0"
+        "mongodb": "^6.11.0"
     },
     "devDependencies": {
         "@vue/cli": "^5.0.0",
-        "eslint": "^9.11.0",
+        "eslint": "^9.16.0",
         "nodemon": "^3.1.0"
     }
 }
